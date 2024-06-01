@@ -1,5 +1,6 @@
 export interface Data{
-  date: {
+  id: number,
+  tempo: {
     content: Date,
     description: string,
   },
@@ -12,19 +13,19 @@ export interface Data{
     description: string,
   },
   quant_updates: {
-    content: string,
+    content: number,
     description: string,
   },
   quant_open: {
-    content: string,
+    content: number,
     description: string,
   },
   quant_close: {
-    content: string,
+    content: number,
     description: string,
   },
   quant_orange_level: {
-    content: string,
+    content: number,
     description: string,
   },
 }
