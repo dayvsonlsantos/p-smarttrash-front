@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 /** @type {import('next').NextConfig} */
+const url = process.env.NEXT_PUBLIC_API_URL;
 const nextConfig = {
   env: {
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
@@ -11,7 +12,7 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: `http://ec2-18-221-92-144.us-east-2.compute.amazonaws.com:8080/ob/:path*`, // Proxy para o backend
+        destination: url, // Proxy para o backend
       }
     ]
   }
